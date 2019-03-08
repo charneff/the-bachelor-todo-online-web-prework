@@ -3,7 +3,6 @@ def get_first_name_of_season_winner(data, season)
     if contestant_hash["status"].downcase == "winner"
       return contestant_hash["name"].split(" ").first
       end
-  
   # code here
 end
 
