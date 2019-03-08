@@ -1,10 +1,9 @@
 def get_first_name_of_season_winner(data, season)
-  data.map do |season, info|
-    season.map do |info, string|
-      if string == "Winner"
-        puts [:name]
+  data[season].each do |contestant_hash|
+    if contestant_hash["status"].downcase == "winner"
+      return contestant_hash["name"].split(" ").first
       end
-  data
+  
   # code here
 end
 
